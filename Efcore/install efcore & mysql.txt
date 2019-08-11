@@ -1,0 +1,16 @@
+Instalar dependencias de paquetes para conectarse a la base de datos
+
+dotnet add NOMBRE_PROYECTO package Microsoft.EntityFrameworkCore
+
+dotnet add NOMBRE_PROYECTO package Microsoft.EntityFrameworkCore.Design
+dotnet add NOMBRE_PROYECTO package MySql.Data.EntityFrameworkCore
+dotnet add NOMBRE_PROYECTO package MySql.Data.EntityFrameworkCore.Design
+
+
+Realizar scaffolding de la base de datos
+
+dotnet ef dbcontext scaffold "server=IPSERVIDOR;port=4040;database=NOMBRE_BASEDEDATOS;user=USUARIO;password=CONSTRASENA" "Pomelo.EntityFrameworkCore.MySql" -o .\Models -f --project NOMBRE_PROYECTO --context NOMBRE_CONTEXTO
+
+Ejemplo
+
+dotnet ef dbcontext scaffold "server=localhost;port=4040;database=mundo;user=root;password=telesca1234" "MySql.Data.EntityFrameworkCore" -o .\Models -f --project EjemploLinqDatabase --context MundoDbContext
