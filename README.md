@@ -20,11 +20,11 @@ Realizar scaffolding de la base de datos
 Ejecutar el siguiente comando en la **Consola de administrador de paquetes**
 
 ```sh
-dotnet ef dbcontext scaffold "server=IPSERVIDOR;port=4040;database=NOMBRE_BASEDEDATOS;user=USUARIO;password=CONSTRASENA" "Pomelo.EntityFrameworkCore.MySql" -o .\Models -f --project NOMBRE_PROYECTO --context NOMBRE_CONTEXTO
+dotnet ef dbcontext scaffold "server=IPSERVIDOR;port=NUMERO_PUERTO;database=NOMBRE_BASEDEDATOS;user=USUARIO;password=CONSTRASENA" "MySql.Data.EntityFrameworkCore" -o .\Models -f --project NOMBRE_PROYECTO --context NOMBRE_CONTEXTO
 ```
 
 Ejemplo
 
 ```sh
-dotnet ef dbcontext scaffold "server=localhost;port=4040;database=mundo;user=root;password=telesca1234" "MySql.Data.EntityFrameworkCore" -o .\Models -f --project EjemploLinqDatabase --context MundoDbContext
+dotnet ef dbcontext scaffold "server=localhost;port=3306;database=mundo;user=root;password=telesca1234" "MySql.Data.EntityFrameworkCore" -o .\Models -f --project EjemploLinqDatabase --context MundoDbContext
 ```
